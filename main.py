@@ -2,6 +2,10 @@ from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 from email.message import EmailMessage
 import aiosmtplib
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env
 
 app = FastAPI()
 
@@ -20,10 +24,9 @@ async def send_email(
     message: str = Form(...)
 ):
     msg = EmailMessage()
-    msg["From"] = "jamradi80@gmail.com"  
-    msg["To"] = "franklinodhis3560@gmail.com"  
+    msg["From"] = os.getenv("EMAIL_USERNAME")
+    msg["To"] = os.getenv("EMAIL_RECEIVER")
     msg["Subject"] = f"New Message from {name}"
-
     msg.set_content(f"From: {name} <{email}>\n\n{message}")
 
     try:
@@ -32,8 +35,8 @@ async def send_email(
             hostname="smtp.gmail.com",
             port=587,
             start_tls=True,
-            username="jamradi80@gmail.com",  
-            password="rgrzgufwecbhvqwk"      
+            username=os.getenv("EMAIL_USERNAME"),
+            password=os.getenv("EMAIL_PASSWORD")
         )
         return {"message": "Email sent successfully!"}
     except Exception as e:
