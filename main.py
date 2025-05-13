@@ -5,7 +5,7 @@ import aiosmtplib
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env
+load_dotenv() 
 
 app = FastAPI()
 
