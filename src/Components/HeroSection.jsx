@@ -19,11 +19,14 @@ const HeroSection = () => {
 
         <div className="flex gap-4">
         <a
-           href="mailto:jamradi80@gmail.com"
-         className="bg-green-400 text-black font-semibold py-2 px-6 rounded-full hover:border-2 hover:border-green-400 hover:bg-transparent hover:text-green-400 transition-all duration-300"
-         >
-        Hire me
-        </a>
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=jamradi80@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-400 text-black font-semibold py-2 px-6 rounded-full hover:border-2 hover:border-green-400 hover:bg-transparent hover:text-green-400 transition-all duration-300"
+>
+  Hire me
+</a>
+
        <a
         href="/Resume.pdf"
         download
