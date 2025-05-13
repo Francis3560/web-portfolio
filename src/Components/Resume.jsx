@@ -163,12 +163,17 @@ const Resume = () => {
     {/* Optional: Add Tech Stack Here */}
     <div data-aos="fade-up" data-aos-delay="300" className="mt-10">
       <h2 className="text-2xl font-semibold mb-6 text-green-400">Tech Stack</h2>
-      <div className="flex flex-wrap gap-6 text-4xl text-green-400">
-        <i className="devicon-react-original hover:text-white transition"></i>
+      <div className="flex flex-wrap gap-6 text-4xl ">
+        <i className="devicon-react-original colored hover:text-white transition"></i>
         <i className="devicon-wordpress-plain hover:text-white transition"></i>
-        <i className="devicon-python-plain hover:text-white transition"></i>
+        <i className="devicon-python-plain colored hover:text-white transition"></i>
         <i className="devicon-express-original hover:text-white transition"></i>
-        <i className="devicon-mongodb-plain hover:text-white transition"></i>
+        <i className="devicon-mongodb-plain colored hover:text-white transition"></i>
+        <img src="https://cdn.shopify.com/static/shopify-favicon.png" alt="Shopify" className="w-6 h-6 hover:scale-110 transition"/>
+        <i className="devicon-firebase-plain colored hover:text-white transition"></i>
+        <i className="devicon-mysql-plain colored hover:text-white transition"></i>
+
+
       </div>
     </div>
   </div>
