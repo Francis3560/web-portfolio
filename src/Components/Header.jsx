@@ -52,7 +52,7 @@ const Header = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-4 bg-black text-sm">
+        <div className="md:hidden px-6 mr-8 pb-4 space-y-4 bg-black text-sm">
           <nav className="flex flex-col space-y-2">
             <Link to="home" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass} onClick={() => setIsOpen(false)}>Home</Link>
             <Link to="about" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass} onClick={() => setIsOpen(false)}>About</Link>
