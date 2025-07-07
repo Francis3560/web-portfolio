@@ -26,12 +26,12 @@ export default function App() {
       </Element>
 
        <Element name="contact">
-         <ContactMe/>
+         <Resume/>
       </Element>
 
       
       <Element name="resume">
-        <Resume/>
+        <ContactMe/>
       </Element>
 
 

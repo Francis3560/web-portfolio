@@ -19,7 +19,7 @@ const Header = () => {
         {/* Left: Avatar and Name */}
         <div className="flex items-center space-x-3">
           <img src={profileImg} alt="Profile" className="w-10 h-10 rounded-full" />
-          <span className="text-lg font-semibold">JamTech</span>
+          <span className="text-lg font-semibold">Francis Odhiambo</span>
         </div>
 
         {/* Hamburger Menu (Mobile) */}
@@ -61,12 +61,12 @@ const Header = () => {
             <Link to="projects" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass} onClick={() => setIsOpen(false)}>All Projects</Link>
           </nav>
           <div className="flex space-x-4 text-xl text-green-400 pt-2">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaLinkedin /></a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaGithub /></a>
-            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaTwitter /></a>
-            <a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaWhatsapp /></a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaInstagram /></a>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaTelegram /></a>
+            <a href="https://www.linkedin.com/in/francis-ongere-67b385309/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaLinkedin /></a>
+            <a href="https://github.com/Francis3560" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaGithub /></a>
+            <a href="https://x.com/KDenyque" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaTwitter /></a>
+            <a href="https://wa.me/message/HGTF5M72JG45N1" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaWhatsapp /></a>
+            <a href="https://www.instagram.com/franko_scar/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaInstagram /></a>
+            <a href="https://t.me/Sewesydaa" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><FaTelegram /></a>
           </div>
         </div>
       )}
