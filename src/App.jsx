@@ -25,12 +25,12 @@ export default function App() {
         <MyProjects/>
       </Element>
 
-       <Element name="contact">
+       <Element name="resume">
          <Resume/>
       </Element>
 
       
-      <Element name="resume">
+      <Element name="contact">
         <ContactMe/>
       </Element>
 

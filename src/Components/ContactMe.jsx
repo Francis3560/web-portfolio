@@ -56,7 +56,7 @@ const ContactMe = () => {
       )}
 
       <div className="flex items-center justify-center mb-12">
-        <h1 className="text-3xl font-bold flex items-center gap-2">
+        <h1 className="text-3xl font-bold flex items-center gap-2 bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text">
           <HiOutlineMailOpen className="text-green-400 text-4xl" />
           Reach out
         </h1>

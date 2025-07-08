@@ -88,7 +88,7 @@ export default function MyProjects() {
   <div className="bg-black text-white py-10 px-4 min-h-screen">
     <div className="max-w-screen-xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-6">
-        My  <span className="text-green-400">Projects</span>
+        My  <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text">Projects</span>
       </h2>
 
       {/* Filter Buttons */}

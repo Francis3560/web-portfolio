@@ -33,10 +33,9 @@ const Header = () => {
         <nav className="hidden md:flex flex-1 justify-center space-x-10 text-sm">
           <Link to="home" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>Home</Link>
           <Link to="about" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>About</Link>
-           <Link to="projects" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>All Projects</Link>
-          <Link to="contact" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>Contact</Link>
+          <Link to="projects" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>All Projects</Link>
           <Link to="resume" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>Resume</Link>
-         
+          <Link to="contact" spy smooth offset={-80} duration={500} activeClass={activeLinkClass} className={linkClass}>Contact</Link>
         </nav>
 
         {/* Right: Social Icons (Desktop Only) */}

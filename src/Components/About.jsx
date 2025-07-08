@@ -21,7 +21,7 @@ const SkillBadge = ({ icon, label }) => (
     transition={{ duration: 0.4 }}
     className="bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-lg bg-opacity-30 text-white px-5 py-3 rounded-xl flex items-center gap-3 shadow-md border border-white/10"
   >
-    <span className="text-xl">{icon}</span>
+    <span className="text-xl bg-green-400">{icon}</span>
     <span className="font-semibold">{label}</span>
   </motion.div>
 );
@@ -30,7 +30,7 @@ const AboutSection = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="bg-black text-white px-6 md:px-20 py-16">
+    <section className="bg-gradient-to-br from-black via-[#2a003f] to-cyan-400 text-white px-6 md:px-20 py-16">
       {/* Heading */}
       <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ delay: 0.2, duration: 0.4 }} className="inline-block bg-gray-900 text-green-400 px-4 py-1 rounded-full text-sm font-semibold tracking-wide">🟢 ABOUT ME</motion.span>
@@ -61,9 +61,41 @@ const AboutSection = () => {
 
           {/* Buttons */}
           <div className="mt-4 flex flex-col items-start gap-4">
-            <button onClick={() => setExpanded(!expanded)} className="text-green-400 font-semibold hover:underline">
+            <button onClick={() => setExpanded(!expanded)} className="bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text hover:underline">
               {expanded ? "Read less" : "Read more"}
             </button>
+
+            {/* Availability Grid */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true }}
+  className="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] rounded-2xl p-6 shadow-lg border border-white/10 mt-6 w-full max-w-2xl"
+>
+  <h3 className="text-xl font-bold text-white mb-4">Available For</h3>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    {[
+      "Full-stack development",
+      "Frontend development",
+      "Mobile app development",
+      "Technical consultation",
+      "Web security audits",
+      "Automation and scripting",
+      "UI/UX design",
+      "Server administration",
+    ].map((item, i) => (
+      <motion.div
+        key={i}
+        whileHover={{ scale: 1.05, backgroundColor: "rgba(16,185,129,0.1)" }}
+        className="flex items-center gap-3 px-4 py-2 rounded-md transition-all bg-black/20 border border-white/5 hover:border-green-400"
+      >
+        <span className="text-green-400 text-lg">✔️</span>
+        <span className="text-white">{item}</span>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
 
             <div className="flex flex-wrap gap-4">
               <motion.a whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }} href="https://mail.google.com/mail/?view=cm&fs=1&to=jamradi80@gmail.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-green-300 border border-green-500 px-5 py-2 rounded-md font-medium hover:bg-green-900/10 transition-all">Let's work together <span className="text-xl">→</span></motion.a>
@@ -77,9 +109,9 @@ const AboutSection = () => {
       {/* Feature Cards */}
       <div className="mb-20">
         <h3 className="text-3xl font-bold text-center mb-10">
-          <span className="text-green-400">
+          <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text">
             <Typewriter
-              words={["Why to choose me", "Core Strengths", "Let’s Build Together"]}
+              words={["Why choose me", "Core Strengths", "Let’s Build Together"]}
               loop={0}
               cursor
               cursorStyle="🟢"
