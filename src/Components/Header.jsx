@@ -19,7 +19,7 @@ const Header = () => {
         {/* Left: Avatar and Name */}
         <div className="flex items-center space-x-3">
           <img src={profileImg} alt="Profile" className="w-10 h-10 rounded-full" />
-          <span className="text-lg font-semibold">Francis Odhiambo</span>
+          <span className="text-lg font-semibold">Francis Ongere</span>
         </div>
 
         {/* Hamburger Menu (Mobile) */}
