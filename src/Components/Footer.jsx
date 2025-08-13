@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Left: Logo and Name */}
         <div className="flex items-center space-x-3">
           <img src={profileImg} alt="Profile" className="w-10 h-10 rounded-full" />
-          <span className="text-lg font-semibold">JamTech</span>
+          <span className="text-lg font-semibold">Francis Odhiambo</span>
         </div>
 
         {/* Center: Navigation Links */}
@@ -43,7 +43,7 @@ const Footer = () => {
 
       {/* Bottom note */}
       <div className="mt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} JamTech. All rights reserved.
+        © {new Date().getFullYear()} Francis Odhiambo. All rights reserved.
       </div>
     </footer>
   );

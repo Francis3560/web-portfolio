@@ -29,10 +29,9 @@ const HeroSection = () => {
             </span>
           </h1>
           <p>
-            I'm a dynamic Software Engineer with a strong background in full-stack development and API integration.
-            I build scalable, user-focused web and mobile solutions that streamline business processes.
-            With hands-on experience in React Native, Python, and FASTAPI, I deliver real-world results.
-            Passionate about innovation, I turn ideas into impactful digital products.
+          Dynamic Software Engineer & Graphic Designer skilled in full-stack development, API integration,
+          and digital content creation. Experienced with React Native, Python, FASTAPI,
+          and modern UI/UX tools, delivering scalable, user-focused solutions backed by strong research and design expertise.
           </p>
 
           {/* Skill Badges */}
@@ -47,7 +46,7 @@ const HeroSection = () => {
               <span>🔋</span> <span className="font-medium">Node.js & MongoDB</span>
             </div>
             <div className="flex items-center gap-2 border border-yellow-400 text-yellow-300 px-4 py-2 rounded-full backdrop-blur-sm bg-white/5">
-              <span>🛒</span> <span className="font-medium">WordPress & Shopify</span>
+              <span>🛒</span> <span className="font-medium">Web & Graphics design</span>
             </div>
           </div>
         </div>
