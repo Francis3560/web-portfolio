@@ -8,7 +8,7 @@ import Project5 from '../assets/Project5.png';
 import Project3 from '../assets/Project3.png';
 import Project4 from"../assets/Project4.png";
 import Project6 from '../assets/Project6.png';
-import Project7 from '../assets/Project7.png';
+import Project8 from '../assets/Project7.png';
 
 const projects = [
   {
@@ -70,7 +70,7 @@ const projects = [
     id: 7,
     name: 'GLD Jewelery POS E-Comerce Website',
     category: 'Web Design',
-    images: [Project7],
+    images: [Project8],
     tech: ['WordPress'],
     description: 'A comprehensive E-comerce website for online jewelery marketing and sales worldwide',
     status: 'Completed',
