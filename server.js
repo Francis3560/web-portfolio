@@ -9,10 +9,33 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
-// CORS setup to allow the frontend to communicate with the backend
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:3000",
+];
+
+if (process.env.SERVICE_URL_FRONTEND) {
+  // Add configured frontend url, fixing potential typos in protocols
+  allowedOrigins.push(process.env.SERVICE_URL_FRONTEND.replace("https//:", "https://"));
+  allowedOrigins.push(process.env.SERVICE_URL_FRONTEND);
+}
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      
+      const normalizedOrigin = origin.trim().replace(/\/$/, "");
+      const isAllowed = allowedOrigins.some(
+        (o) => o.trim().replace(/\/$/, "") === normalizedOrigin
+      );
+
+      if (isAllowed || origin.startsWith("http://localhost:") || origin.endsWith("jamradi.com")) {
+        return callback(null, true);
+      }
+      return callback(new Error("CORS policy blocked access from origin: " + origin), false);
+    },
     credentials: true,
   })
 );
