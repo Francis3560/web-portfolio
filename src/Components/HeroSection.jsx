@@ -1,14 +1,14 @@
 import React from "react";
-import { Download, ArrowDown } from "lucide-react";
+import { Download, ArrowDown, Atom, Smartphone, Database, Palette } from "lucide-react";
 import heroImage from "../assets/Hero1.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen overflow-hidden text-white px-6 md:px-20 flex items-center z-10">
+    <section className="relative h-screen overflow-hidden text-white px-6 md:px-20 flex items-center z-10 bg-zinc-950">
       {/* 🔹 Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src="https://res.cloudinary.com/dqp3wil8i/video/upload/v1751970349/13820343_3840_2160_30fps_hi0ph2.mp4"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 hidden md:block"
+        src="https://res.cloudinary.com/dqp3wil8i/video/upload/f_auto,q_auto,w_1280/v1751970349/13820343_3840_2160_30fps_hi0ph2.mp4"
         autoPlay
         loop
         muted
@@ -37,16 +37,16 @@ const HeroSection = () => {
           {/* Skill Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-6">
             <div className="flex items-center gap-2 border border-green-500 text-green-300 px-4 py-2 rounded-full backdrop-blur-sm bg-white/5">
-              <span>⚛️</span> <span className="font-medium">React & Next.js</span>
+              <Atom size={20} /> <span className="font-medium">React & Next.js</span>
             </div>
             <div className="flex items-center gap-2 border border-blue-400 text-blue-300 px-4 py-2 rounded-full backdrop-blur-sm bg-white/5">
-              <span>📱</span> <span className="font-medium">Mobile Development</span>
+              <Smartphone size={20} /> <span className="font-medium">Mobile Development</span>
             </div>
             <div className="flex items-center gap-2 border border-green-500 text-green-300 px-4 py-2 rounded-full backdrop-blur-sm bg-white/5">
-              <span>🔋</span> <span className="font-medium">Node.js & MongoDB</span>
+              <Database size={20} /> <span className="font-medium">Node.js & MongoDB</span>
             </div>
             <div className="flex items-center gap-2 border border-yellow-400 text-yellow-300 px-4 py-2 rounded-full backdrop-blur-sm bg-white/5">
-              <span>🛒</span> <span className="font-medium">Web & Graphics design</span>
+              <Palette size={20} /> <span className="font-medium">Web & Graphics design</span>
             </div>
           </div>
         </div>

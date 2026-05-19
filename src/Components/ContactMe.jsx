@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import projectImage from "../assets/ContactMe.png";
 import { HiOutlineMailOpen } from "react-icons/hi";
-import { AiOutlineCheckCircle } from "react-icons/ai";
 import { ImSpinner2 } from "react-icons/im";
+import Swal from "sweetalert2";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-  const [successPopup, setSuccessPopup] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,15 +15,16 @@ const ContactMe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setSuccessPopup(false);
 
     try {
       const form = new FormData();
       form.append("name", formData.name);
       form.append("email", formData.email);
       form.append("message", formData.message);
+      form.append("to", "jamradi80@gmail.com");
 
-      const res = await fetch("http://localhost:8000/send-email", {
+      const baseUrl = import.meta.env.VITE_API_URL !== undefined ? import.meta.env.VITE_API_URL : "http://localhost:8000";
+      const res = await fetch(`${baseUrl}/send-email`, {
         method: "POST",
         body: form,
       });
@@ -33,13 +33,33 @@ const ContactMe = () => {
 
       if (res.ok) {
         setFormData({ name: "", email: "", message: "" });
-        setSuccessPopup(true);
-        setTimeout(() => setSuccessPopup(false), 4000);
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "Thank you for reaching out. I'll get back to you as soon as possible.",
+          background: "#121212",
+          color: "#fff",
+          confirmButtonColor: "#4ade80",
+        });
       } else {
-        alert(data?.error || "Error sending message.");
+        Swal.fire({
+          icon: "error",
+          title: "Failed to Send",
+          text: data?.error || "Something went wrong. Please try again.",
+          background: "#121212",
+          color: "#fff",
+          confirmButtonColor: "#f87171",
+        });
       }
     } catch (error) {
-      alert("Error sending message. Try again.");
+      Swal.fire({
+        icon: "error",
+        title: "Error occurred",
+        text: "Could not connect to the server. Please try again.",
+        background: "#121212",
+        color: "#fff",
+        confirmButtonColor: "#f87171",
+      });
       console.error("Email send error:", error);
     } finally {
       setLoading(false);
@@ -48,12 +68,6 @@ const ContactMe = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white px-4 py-10">
-      {successPopup && (
-        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 z-50 animate-bounce">
-          <AiOutlineCheckCircle className="text-white text-3xl" />
-          <span className="font-semibold text-lg">Message sent successfully!</span>
-        </div>
-      )}
 
       <div className="flex items-center justify-center mb-12">
         <h1 className="text-3xl font-bold flex items-center gap-2 bg-gradient-to-r from-green-400 to-cyan-400 text-transparent bg-clip-text">

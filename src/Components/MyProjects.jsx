@@ -3,12 +3,17 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaCheckCircle } from 'react-icons/fa';
 import Project1 from '../assets/Project1.png';
-import Project2 from '../assets/Project2.png';
+import Project2 from '../assets/Project 2.png';
 import Project5 from '../assets/Project5.png';
 import Project3 from '../assets/Project3.png';
 import Project4 from"../assets/Project4.png";
 import Project6 from '../assets/Project6.png';
 import Project7 from '../assets/project7.png';
+import Project8 from '../assets/project8.png';
+import Project9 from '../assets/project9.png';
+import Project10 from '../assets/Project10.png';
+import Project11 from '../assets/Project11.png';
+import Project12 from '../assets/Project12.png';
 
 const projects = [
   {
@@ -23,12 +28,13 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Flex Living Real Estate Website',
-    category: 'Mobile Application',
+    name: 'Aurora HRMS',
+    category: 'Web Development',
     images: [Project4],
-    tech: ['React', 'Tailwind CSS', 'Express','Mongo'],
-    description: 'A realtor website for booking, renting and even buying realtor properties from agencies.',
-    status: 'In Progress'
+    tech: ['React', 'Tailwind CSS', 'Express','MySQL','n8n'],
+    description: 'A complete HR management System for managing employees, payroll and thier information.',
+    status: 'Completed',
+    link: 'https://hr.vizxglobal.com/'
   },
   {
     id: 3,
@@ -41,30 +47,33 @@ const projects = [
   },
   {
     id: 4,
-    name: 'AI & Machine Learning Based ERP',
-    category: 'Desktop Application',
+    name: 'Kinyuki Country Hotel',
+    category: 'Web Development',
     images: [Project5],
-    tech: ['React', 'Logistic Regression', 'FASTAPI','Artificial Intelligence'],
-    description: 'A comprehensive ERP desktop application with capability of predicting future performance of learners based on some factors',
-    status: 'In Progress'
+    tech: ['React', 'Express', 'MySQL','Tailwind CSS'],
+    description: 'A complete website for Kinyuki Country Hotel for room bookings and management.Also include a POS system for managing the hotel operations.',
+    status: 'Completed',
+    link: 'https://kinyukicountryhotel.com/'
   },
     {
     id: 5,
-    name: 'FireOrion Branding Company',
+    name: 'BPO LMS',
     category: 'Web Development',
     images: [Project2],
-    tech: ['React', 'Tailwind CSS', 'Express','Mongo'],
-    description: 'A full-stack POD company website, for automatic canvas design, customization and delivery of white label products.',
-    status: 'In Progress'
+    tech: ['React', 'Tailwind CSS', 'Express','MySQL'],
+    description: 'A full-stack LMS for BPO employees for easy access to learning materials and resources.',
+    status: 'Completed',
+    link: 'https://academy.vizxglobal.com/'
   },
     {
     id: 6,
-    name: 'Healthy Living Herbal Clinic WordPress Website',
-    category: 'Web Design',
+    name: 'Resomax Insurance ',
+    category: 'Web Development',
     images: [Project6],
-    tech: ['WordPress'],
-    description: 'A comprehensive E-comerce website for online herbal products ordering and delivery worldwide',
-    status: 'Completed'
+    tech: ['React','Tailwind CSS','Figma'],
+    description: 'An insurance website for Resomax insurance agency for  selling their insurance products and services.',
+    status: 'Completed',
+    link: 'https://resomaxinsurance.com/'
   },
     {
     id: 7,
@@ -76,6 +85,57 @@ const projects = [
     status: 'Completed',
     link: 'https://gld.com/'
   },
+  {
+    id: 8,
+    name: 'Hera Collections Website + POS',
+    category: 'Web Development',
+    images: [Project8],
+    tech: ['React','Tailwind CSS','Express','MySQL'],
+    description: 'A comprehensive E-comerce website for online  bag collections sales accross the globe with intrnational payment options and zoning delivery',
+    status: 'Completed',
+    link: 'https://heracollections.com/'
+  },
+  {
+    id: 9,
+    name: 'Marketing Diagnostic Tracking Tool',
+    category: 'Web Development',
+    images: [Project9],
+    tech: ['React','Tailwind CSS','Express','MySQL'],
+    description: 'A diagnostic tool for marketing to track their marketing performance and  make decisions.',
+    status: 'Completed',
+    link: 'https://atc-franchise-diagonistic.vizxglobal.com/'
+  },
+  {
+    id: 10,
+    name: 'Smart Agribusiness App',
+    category: 'Web Development',
+    images: [Project10],
+    tech: ['React','Tailwind CSS','Express','MySQL'],
+    description: 'A smart agrisync application meant for cooperatives saccos, farming agencies and native farmers to cordinate, access modern farming interpreters, loans and farm produce marketing platforms  .',
+    status: 'In progress',
+    link: 'https://agribusiness.jamradi.com/'
+  },
+    {
+    id: 11,
+    name: 'Kodiloop',
+    category: 'Web Development',
+    images: [Project11],
+    tech: ['React','Tailwind CSS','Express','MySQL'],
+    description: 'A smart cordinator between the Landlord, Property Mnagers and Tenants allowing insync invoice automation for rent payment, robust rental agreements, dynamic communication on maintenance requests. All in one rental tracker',
+    status: 'In progress',
+  },
+  {
+    id: 12,
+    name: 'Whatsapp API',
+    category: 'Web Development',
+    images: [Project12],
+    tech: ['Vue','Tailwind CSS','Node.js','SurrealDB'],
+    description: 'WhatsApp, SMS, Email - connect with your customers through every channel with a single powerful API. Built for developers.',
+    status: 'In progress',
+    link: 'https://whatsappapi.genius.ke/'
+  },
+
+
 
 ];
 

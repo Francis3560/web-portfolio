@@ -21,11 +21,12 @@ app.add_middleware(
 async def send_email(
     name: str = Form(...),
     email: str = Form(...),
-    message: str = Form(...)
+    message: str = Form(...),
+    to: str = Form(None)
 ):
     msg = EmailMessage()
     msg["From"] = os.getenv("EMAIL_USERNAME")
-    msg["To"] = os.getenv("EMAIL_RECEIVER")
+    msg["To"] = to or os.getenv("EMAIL_RECEIVER") or "jamradi80@gmail.com"
     msg["Subject"] = f"New Message from {name}"
     msg.set_content(f"From: {name} <{email}>\n\n{message}")
 

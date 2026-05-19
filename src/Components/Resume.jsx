@@ -6,21 +6,23 @@ import "aos/dist/aos.css";
 const education = [
   { year: "2025– To Date", title: "CISCO Networking", place: "Networking Academy" },
   { year: "2021–2025", title: "Software Engineering", place: "Kisii University" },
+  { year: "June 2024– September 2024", title: "Industrial Attachment", place: "AlphaNex Software Limited" },
   { year: "2017–2020", title: "Secondary Education", place: "Kisumu School" },
 ];
 
 const experience = [
+  { year: "Sep 2025 – To Date", title: "Junior Software Engineer", place: "Vizx International Staffing Solution" },
+  { year: "Sep 2025 – April 2026", title: "Fullstack Developer", place: "DukaTrack Software Limited" },
   { year: "2025 – Present", title: "Internship", place: "Aplance Agency" },
-  { year: "June 2024– September 2024", title: "Industrial Attachment", place: "AlphaNex Software Limited" },
-  { year: "2021– 2024", title: "KUSCA Club Memembership", place: "Kisii University" }
+  { year: "2021– 2024", title: "KUSCA Club Membership", place: "Kisii University" }
 ];
 
 const skills = [
-  { name: "Web Design", percent: 85, color: "bg-green-400" },
-  { name: "Mobile Application", percent: 55, color: "bg-green-400" },
-  { name: "Web Development", percent: 85, color: "bg-green-400" },
-  { name: "Desktop Application", percent: 60, color: "bg-green-400" },
-  { name: "Machine Learning", percent: 75, color: "bg-green-400" },
+  { name: "Web Development", percent: 95, color: "bg-green-400" },
+  { name: "Web Design", percent: 75, color: "bg-green-400" },
+  { name: "Mobile Application", percent: 75, color: "bg-green-400" },
+  { name: "Desktop Application", percent: 70, color: "bg-green-400" },
+  { name: "Machine Learning", percent: 60, color: "bg-green-400" },
 ];
 
 const knowledges = [
@@ -38,11 +40,11 @@ const Resume = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden text-white px-6 sm:px-4 py-10">
+    <div className="relative min-h-screen overflow-hidden text-white px-6 sm:px-4 py-10 bg-zinc-950">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src="https://res.cloudinary.com/dqp3wil8i/video/upload/v1751970349/13820343_3840_2160_30fps_hi0ph2.mp4"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 hidden md:block"
+        src="https://res.cloudinary.com/dqp3wil8i/video/upload/f_auto,q_auto,w_1280/v1751970349/13820343_3840_2160_30fps_hi0ph2.mp4"
         autoPlay
         loop
         muted
