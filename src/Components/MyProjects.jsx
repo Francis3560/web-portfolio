@@ -11,9 +11,9 @@ import Project6 from '../assets/Project6.png';
 import Project7 from '../assets/project7.png';
 import Project8 from '../assets/project8.png';
 import Project9 from '../assets/project9.png';
-import Project10 from '../assets/Project10.png';
-import Project11 from '../assets/Project11.png';
-import Project12 from '../assets/Project12.png';
+import Project10 from '../assets/project10.png';
+import Project11 from '../assets/project11.png';
+import Project12 from '../assets/project12.png';
 
 const projects = [
   {
